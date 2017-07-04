@@ -1,0 +1,60 @@
+/* <!-- 当前位置样式 -->
+ */			
+.trtr{
+			 border-top-left-radius:2px;
+			 border-bottom-left-radius:2px;
+			 display:block; 
+			 float:left; 
+			 height:26px; 
+			 line-height: 25px;
+			 font-size: 1.4rem;
+			 background:#FF7B79; 
+			 text-align:center; 
+			 padding:0 45px; 
+			 position:relative; 
+			 margin:0 10px 0px 0;   
+			 text-decoration:none; 
+			 color:#000; 
+		}
+	.trtr>a{
+		 color:#000; 
+	
+}
+.trtr:after { 
+			float:left; 
+			content:"";   
+			border-top:13px solid #FF7B79; 
+			border-bottom:13px solid #FF7B79; 
+			border-right:25px solid transparent ; 
+			position:absolute;
+			right:-25px;
+			top:0; 
+}	
+
+
+/* lesson */
+.ui_content_spread{
+	margin: 40px;
+	padding: 0;
+	padding-bottom: 30px;
+	min-height: 550px;
+}/* 
+.ui_catalogue_list>ol{
+	margin:12px 0px;
+}
+.ui_catalogue_list>ol>li{
+	list-style-position:inside;padding-left:10px;
+	margin:5px 30px 0px 30px; 
+	border-bottom: 1px solid #ccc; 
+	height: 26px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+}
+.ui_catalogue_list>ol>li>a{
+	color: #000;
+	text-decoration: none;
+	color: #000;
+	font-size: 1.2rem;
+	margin-left: -10px;
+}	 */	

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+  <title>首页</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/index2.css">
+    <link rel="stylesheet" type="text/css" href="css/cyhadd.css">
+    <link rel="stylesheet" href="css/pageCode.css" />
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/login.css">
+    <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+    <script src="js/jQuery.dotdotdot-master/src/jquery.dotdotdot.min.js" type="text/javascript"></script>
+    <script src="angular-1.4.6/angular.js"></script>
+    <script src="angular-1.4.6/angular-sanitize.js"></script>
+    <script src="js/angular-ui-router.js"></script>
+    <script src="js/directives.js"></script>
+</head>
+<body ng-controller="appcontroller">
+  <!-- 头部部分 -->
+  <div class="header" id="header" ng-controller="navigationCtr">
+    <div id="welcome">
+      <div class="welcome">
+        <span title="欢迎访问堂外堂思政e盟官方网站!">欢迎访问堂外堂思政e盟官方网站!</span>
+        <ul>
+          <li><a href="#"><span class="glyphicon glyphicon-earphone"></span>联系我们</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-home"></span>设为主页</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-bookmark"></span>加入收藏</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="nav-header">
+      <div class="logo">
+        <a href="#/index">
+          <img src="images/tang-logo.png">
+        </a>
+      </div>
+      <div class="weather">
+        <iframe width="200" scrolling="no" height="50" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=12&icon=1&num=1"></iframe>
+      </div>
+      <div class="login_btn">
+        <a ui-sref="login"><button class="btn btn-danger login" >登录</button></a>
+        <a ui-sref="register"><button class="btn btn-default regis">注册</button></a>
+        <br>
+        <a href='./submisson.html' target='_blank'><button class="btn btn-xs submit btn-danger">我要投稿</button></a>
+      </div>
+   <!--    <div class="login_btn" id='gl_user'>
+        <a><button class="btn btn-danger login" id='gl_username' style='width:100px'>18813295246</button></a>
+        <a><button class="btn btn-default regis" id='gl_exit'>退出</button></a>
+        <br>
+        <a href='./submisson.html' target='_blank'><button class="btn btn-xs submit btn-danger">我要投稿</button></a>
+      </div> -->
+      <div class="search">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="搜索您感兴趣的内容">
+              <span class="input-group-btn">
+                <button class="btn btn-danger" type="button"><span class="glyphicon glyphicon-search"></span> 搜索</button>
+              </span>
+        </div>
+      </div>
+    </div>
+    <!-- 导航栏 -->
+    <div id="nav_title">
+      <ul>
+        <li><a href="{{navigationList[0].link}}">{{navigationList[0].document}}</a></li>
+        <li><a href="{{navigationList[1].link}}">{{navigationList[1].document}}</a></li>
+        <li><a href="{{navigationList[2].link}}">{{navigationList[2].document}}</a></li>
+        <li><a href="{{navigationList[3].link}}">{{navigationList[3].document}}</a></li>
+        <li><a href="{{navigationList[4].link}}">{{navigationList[4].document}}</a></li>
+        <li><a href="{{navigationList[5].link}}">{{navigationList[5].document}}</a></li>
+        <li><a href="{{navigationList[6].link}}">{{navigationList[6].document}}</a></li>
+
+        <li class="up"><a href="#">收起</a></li>
+      </ul>
+    </div>
+    <!-- 二级导航栏 -->
+    <div id="nav_content">
+      <div class="nav_content">
+        <div class="nav_content_title"><a href="{{navigationList[7].link}}">{{navigationList[7].document}}</a></div>
+        <div class="nav_content_content">
+          <ul>
+        	<li><a href="{{navigationList[8].link}}">{{navigationList[8].document}}</a></li>
+        	<li><a href="{{navigationList[10].link}}">{{navigationList[10].document}}</a></li>
+       		<li><a href="{{navigationList[9].link}}">{{navigationList[9].document}}</a></li>
+        	<li><a href="{{navigationList[11].link}}">{{navigationList[11].document}}</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="nav_content">
+        <div class="nav_content_title"><a href="{{navigationList[12].link}}">{{navigationList[12].document}}</a></div>
+        <div class="nav_content_content course">
+          <ul>
+            <li><a href="{{navigationList[13].link}}">{{navigationList[13].document}}</a></li>
+        	<li><a href="{{navigationList[15].link}}">{{navigationList[15].document}}</a></li>
+       		<li><a href="{{navigationList[14].link}}">{{navigationList[14].document}}</a></li>
+        	<li><a href="{{navigationList[16].link}}">{{navigationList[16].document}}</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- 更多 -->
+      <div class="more">
+        <span><a href="#">更多>></a></span>
+      </div>
+      <div class="nav_content">
+        <div class="nav_content_title"><a href="{{navigationList[17].link}}">{{navigationList[17].document}}</a></div>
+        <div class="nav_content_content">
+          <ul>
+            <li><a href="{{navigationList[18].link}}">{{navigationList[18].document}}</a></li>
+        	<li><a href="{{navigationList[20].link}}">{{navigationList[20].document}}</a></li>
+       		<li><a href="{{navigationList[19].link}}">{{navigationList[19].document}}</a></li>
+        	<li><a href="{{navigationList[21].link}}">{{navigationList[21].document}}</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="nav_content">
+        <div class="nav_content_title"><a href="{{navigationList[22].link}}">{{navigationList[22].document}}</a></div>
+        <div class="nav_content_content">
+          <ul>
+            <li><a href="{{navigationList[23].link}}">{{navigationList[23].document}}</a></li>
+        	<li><a href="{{navigationList[25].link}}">{{navigationList[25].document}}</a></li>
+       		<li><a href="{{navigationList[24].link}}">{{navigationList[24].document}}</a></li>
+        	<li><a href="{{navigationList[26].link}}">{{navigationList[26].document}}</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="nav_content">
+        <div class="nav_content_title"><a href="{{navigationList[27].link}}">{{navigationList[27].document}}</a></div>
+        <div class="nav_content_content">
+          <ul>
+           <li><a href="{{navigationList[28].link}}">{{navigationList[28].document}}</a></li>
+        	<li><a href="{{navigationList[30].link}}">{{navigationList[30].document}}</a></li>
+       		<li><a href="{{navigationList[29].link}}">{{navigationList[29].document}}</a></li>
+        	<li><a href="{{navigationList[31].link}}">{{navigationList[31].document}}</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="nav_content">
+        <div class="nav_content_title"><a href="{{navigationList[32].link}}">{{navigationList[32].document}}</a></div>
+        <div class="nav_content_content">
+          <ul>
+            <li><a href="{{navigationList[33].link}}">{{navigationList[33].document}}</a></li>
+        	<li><a href="{{navigationList[35].link}}">{{navigationList[35].document}}</a></li>
+       		<li><a href="{{navigationList[34].link}}">{{navigationList[34].document}}</a></li>
+        	<li><a href="{{navigationList[36].link}}">{{navigationList[36].document}}</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="nav_content">
+        <div class="nav_content_title"><a href="{{navigationList[37].link}}">{{navigationList[37].document}}</a></div>
+        <div class="nav_content_content">
+          <ul>
+        	<li><a href="{{navigationList[40].link}}">{{navigationList[40].document}}</a></li>
+       		<li><a href="{{navigationList[39].link}}">{{navigationList[39].document}}</a></li>
+        	<li><a href="{{navigationList[41].link}}">{{navigationList[41].document}}</a></li>
+        	 <li><a href="{{navigationList[38].link}}">{{navigationList[38].document}}</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="up">
+        <span><a href="#">收起>></a></span>
+      </div>
+    </div>
+  </div>
+    <div class="clearfix"></div>
+    <div id="content" >
+      <div ui-view>
+      </div> 
+          <!-- 分割线 -->
+    <div class="clearfix"></div>
+      <div class="footer-line ">
+          <img src="images/footer-line.png">
+      </div>  
+    </div>
+    
+    <div class="clearfix"></div>
+    <!-- 尾部部分 -->
+    <footer>
+      <div id="footer">
+        <div>Copyright &copy; 2014-2017 地址：河南省郑州市郑东新区正光路11号 电话：0371-69691982 0371 传真：037-1686868</div>
+        <div>ICP备案编号:豫ICP备0911211号</div>
+      </div>
+    </footer>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+  <script src="js/jquery.page.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/service.js"></script>
+</body>
+</html>
+

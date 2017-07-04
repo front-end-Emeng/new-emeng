@@ -1,0 +1,288 @@
+
+
+
+    <!-- 内容部分 -->
+        <!-- 轮播展示 -->
+        <div class="line-cut"><img src="images/line-cut-top.png"></div>
+        <div id="play">
+            <ul>
+                <li id="playBg"></li>
+                <li id="playText">澳大利亚：体验蓝山风</li>
+                <li id="playNum"><a>1</a><a>2</a><a>3</a><a>4</a></li>
+                <li id="playShow">
+                    <a  target="_blank"><img src="images/play-pic.png" alt="黄坤明在中国政研会第"></a> 
+                     <a  target="_blank"><img src="images/play-pic.png" alt="澳大利亚：体验蓝山风光2"></a>
+                     <a  target="_blank"><img src="images/play-pic.png" alt="澳大利亚：体验蓝山风光3"></a> 
+                     <a  target="_blank"><img src="images/play-pic.png" alt="澳大利亚：体验蓝山风光4"></a>  
+                </li>
+            </ul>
+        </div>
+        <!-- 最新资料 -->
+        <div class="commonClass news-show">
+            <div class="news-title">
+                <a ><span class="news-logo"><img src="images/news-logo.png"></span></a>
+                <a  class="title"><span>最新资料</span></a>
+                <a ui-sref="passage.taptype({taptype:'latestnews'})" class="more"><span>更多>></span></a>
+            </div>
+            <div class="common-content news-content">
+                <ul>
+                    <li ng-repeat="x in newestPassageList"><a ui-sref="passage.taptype.articleid({taptype:'latestnews',articleid:x.id})"><span class="type">>&nbsp;</span><span class="text">{{x.titile}}</span><span class="date"></span></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 名师新秀 -->
+        <div id="teacher-show">
+            <div class="teacher-title">
+                <a ><span class="teacher-logo"> <img src="images/tea-logo.png"></span></a>
+                <a  class="title"><span>名师新秀</span></a>
+                <a ui-sref="teacher.taptype({taptype:'rookie'})" class="more"><span>更多>></span></a>
+            </div>
+            <div class="teacher-content">
+                <ul>
+                    <li><a ui-sref="teacher.taptype.articleid({taptype:'rookie',articleid:1})"  ><img src="images/tea-pic1.png" class="tea-img"><span class="tea-intro">俞正声主持全国政协召开双周协商座谈会</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 分割线 -->
+        <div class="line-cut"><img src="images/line-cut.png"></div>
+        <!-- 思政动态 -->
+        <div class="commonClass dynamic-show">
+            <div class="news-title dynamic-title">
+                <a ><span class="dynamic-logo"><img src="images/dynamic-logo.png"></span></a>
+                <a  class="title"><span>思政动态</span></a>
+                <a ui-sref="passage.taptype({taptype:'IPstate'})" class="more"><span>更多>></span></a>
+            </div>
+            <div class="common-content dynamic-content">
+                <ul>
+                    <li ng-repeat="x in dynamicList"><a ui-sref="passage.taptype.articleid({taptype:'IPstate',articleid:x.id})" ><span class="type">>&nbsp;</span><span class="text">{{x.titile}}</span><span class="date"></span></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 马院头条 -->
+        <div class="commonClass headline">
+            <div class="news-title headline-title">
+                <a ><span class="headline-logo"><img src="images/topLine-logo.png"></span></a>
+                <a  class="title"><span>马院头条</span></a>
+                <a ui-sref="passage.taptype({taptype:'headline'})" class="more"><span>更多>></span></a>
+            </div>
+            <div class="common-content headline-content">
+                <ul>
+                    <li ng-repeat="x in headlineList" class="headline-li"><a ui-sref="passage.taptype.articleid({taptype:'headline',articleid:x.id})"><span class="type">>&nbsp;</span><span class="text">{{x.titile}}</span><span class="date"></span></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 猜你兴趣 -->
+        <div id="interest">
+            <div class="inter-container">
+                <div class="inter-title">
+                    <span>
+                        猜你喜欢
+                    </span>
+                </div>
+                <ul>
+                    <li>
+                        <a ><img src="images/ad-pic1.png" class="ad-img" >
+                        <div class="ad-text">
+                            <span>软文推广平台</span>
+                        </div>
+                        </a>
+                    </li><li>
+                        <a ><img src="images/ad-pic1.png" class="ad-img" >
+                        <div class="ad-text">
+                            <span>软文推广平台</span>
+                        </div>
+                        </a>
+                    </li><li>
+                        <a ><img src="images/ad-pic1.png" class="ad-img" >
+                        <div class="ad-text">
+                            <span>软文推广平台</span>
+                        </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 我有话说 -->
+        <div class="commonClass express" >
+                <div class="news-title express-title">
+                    <a ><span class="news-logo"><img src="images/saying-Logo.png"></span></a>
+                    <a  class="title"><span>我有话说</span></a>
+                    <a ui-sref="saying.taptype({taptype:'hotPost'})" class="more"><span>更多>></span></a>
+                </div>
+                <div class="second-title">
+                        <a ><span class="tab active tab-one">热帖榜</span></a>
+                        <a href="javascript:"><span class="tab tab-two">实时更新</span></a>
+                        <div class="input-group">
+                            <input type="text" class="form-control " placeholder="搜索">
+                            <span class="input-group-btn">
+                                <button class="btn btn-info" type="button"><span class="glyphicon glyphicon-search search"></span></button>
+                            </span>
+                        </div><!-- /input-group -->
+                        <a ><span class="glyphicon glyphicon-edit edit"></span></a>
+                    </div>
+                <div class="common-content">
+                    <div class="content-one" id="content-one" >
+                        <ol class="content1">   
+                        <a ng-repeat="x in postList" ui-sref="saying.taptype.articleid({taptype:'hotPost',articleid:x.id})"><li><span class="text">{{x.titile}}</span><span class="date">{{x.publishTime}}</span><span class="name">夜尽天明</span><span class="glyphicon glyphicon-user"></span></li></a>
+                    
+                        </ol>
+                    </div>
+                    <div class="content-two" style="display:none">
+                      <ol class="content1">
+                       	 <a ng-repeat="x in postList" ui-sref="saying.taptype.articleid({taptype:'hotPost',articleid:x.id})"><li><span class="text">{{x.titile}}</span><span class="date">{{x.publishTime}}</span><span class="name">夜尽天明</span><span class="glyphicon glyphicon-user"></span></li></a>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        <!-- 会议论坛 -->
+        <div class="commonClass conference" >
+            <div class="news-title conference-title">
+                <a ><span class="conference-logo"><img src="images/conference-logo.png"></span></a>
+                <a  class="title"><span>会议论坛</span></a>
+                <a ui-sref="meeting" class="more"><span>更多>></span></a>
+            </div>
+            <div class="common-content saying-content" id="common-content">
+                <ul>
+                    <li  ng-repeat="x in meeting"><a ui-sref="meeting.articleid({articleid:x.id})"><span class="text">{{x.title}}</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 盟员广场 -->
+        <div class="commonClass friend">
+            <div class="news-title friend-title">
+                <a ><span class="friend-logo"><img src="images/school-logo.png"></span></a>
+                <a  class="title"><span>盟员广场</span></a>
+            </div>
+            <div class="second-title">
+                <ul>
+                    <li><span class="tab active">本科院校</span></li>
+                    <li><span class="tab">独立学院</span></li>
+                    <li><span class="tab">高职院校</span></li>
+                    <a ><span ui-sref="school.taptype({taptype:'benke'})"  class="more">更多学校>></span></a>
+                    <div class="input-group">
+                        <input type="text" class="form-control " placeholder="搜索">
+                        <span class="input-group-btn">
+                            <button class="btn btn-info" type="button"><span class="glyphicon glyphicon-search search"></span></button>
+                        </span>
+                    </div><!-- /input-group -->
+                </ul>
+            </div>
+            <div class="common-content school-content">
+                <ul>
+                    <li><a   ><span class="school-img"><img src="images/school-11.png"></span><br><span class="school-name">广州中医药大学</span></a></li>
+                </ul>
+                <ul style="display:none">
+                    
+                    <li><a ><span class="school-img"><img src="images/school-21.png"></span><br><span class="school-name">广东外语外贸大学</span></a></li>
+                </ul>
+                <ul style="display:none">
+                    <li><a ><span class="school-img"><img src="images/school-11.png"></span><br><span class="school-name">广州中医药大学</span></a></li>
+                </ul>
+
+
+              <!--   <span class="left"><<</span>
+                <span class="right">>></span> -->
+            </div>
+
+            <div class="other-school">
+                更多学校:
+                <select name=province" id="province">
+                    <option value='广东省'>广东省</option>
+                    <option value='浙江省'>浙江省</option>
+                    <option value='安徽省'>安徽省</option>
+                </select>
+                <select name='province' id="school">
+                    <option value='广东省'>广东工业大学</option>
+                    <option value='浙江省'>广州大学</option>
+                    <option value='安徽省'>中山大学</option>
+                </select>
+                <div id="move_to">跳转</div>
+            </div>
+        
+        </div>
+
+        <!-- 友情链接 -->
+        <div class="commonClass links">
+            <div class="news-title links-title">
+                <a ><span class="links-logo"><img src="images/friend-logo.png"></span></a>
+                <a  class="title"><span>友情链接</span></a>
+                <a ui-sref="links" class="more"><span>更多>></span></a>
+            </div>
+            <div class="common-content links-content">
+                <div class="content">
+                    <ul>
+                        <a ><li>爱课程网</li></a>
+                        <a ><li>精品课程网</li></a>
+                        <a ><li>中国青年网</li></a>
+                        <a ><li>爱课程网</li></a>
+                        <a ><li>精品课程网</li></a>
+                        <a ><li>中国青年网</li></a>
+                    </ul>
+                </div>
+                <div class="content">
+                    <ul>
+                        <a ><li>爱课程网</li></a>
+                        <a ><li>精品课程网</li></a>
+                        <a ><li>中国青年网</li></a>
+                        <a ><li>爱课程网</li></a>
+                        <a ><li>精品课程网</li></a>
+                        <a ><li>中国青年网</li></a>
+                    </ul>
+                </div>
+                <div class="content">
+                    <ul>
+                        <a ><li>爱课程网</li></a>
+                        <a ><li>精品课程网</li></a>
+                        <a ><li>中国青年网</li></a>
+                        <a ><li>爱课程网</li></a>
+                        <a ><li>精品课程网</li></a>
+                        <a ><li>中国青年网</li></a>
+                    </ul>
+                </div>
+                <div class="content">
+                    <ul>
+                        <a ><li>爱课程网</li></a>
+                        <a ><li>精品课程网</li></a>
+                        <a ><li>中国青年网</li></a>
+                        <a ><li>爱课程网</li></a>
+                        <a ><li>精品课程网</li></a>
+                        <a ><li>中国青年网</li></a>
+                    </ul>
+                </div>
+                <div class="content">
+                    <ul>
+                        <a ><li>爱课程网</li></a>
+                        <a ><li>精品课程网</li></a>
+                        <a ><li>中国青年网</li></a>
+                        <a ><li>爱课程网</li></a>
+                        <a ><li>精品课程网</li></a>
+                        <a ><li>中国青年网</li></a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <h2>AngularJS 路由测试</h2>
+        
+<ul>
+    <li><a ui-sref="index">首页</a></li>
+    <li><a ui-sref="teacher.taptype({taptype:'elegant'})">名师页面</a></li>
+    <li><a ui-sref="onlinelesson">在线课程</a></li>
+    <li><a ui-sref="authority.taptype({taptype:'author'})">权威发布</a></li>
+    <li><a ui-sref="passage.taptype({taptype:'latestnews'})">最新资讯</a></li>
+    <li><a ui-sref="passage.taptype({taptype:'current'})">时事要闻</a></li>
+    <li><a ui-sref="passage.taptype({taptype:'recommend'})">热点推荐</a></li>
+    <li><a ui-sref="passage.taptype({taptype:'IPstate'})">思政动态</a></li>
+    <li><a ui-sref="passage.taptype({taptype:'headline'})">马院头条</a></li>
+    <li><a ui-sref="meeting">会议论坛</a></li>
+    <li><a ui-sref="guess">猜你喜欢</a></li>    
+    <li><a ui-sref="lesson">课程资源</a></li>
+    <li><a ui-sref="school.taptype({taptype:'benke'})">盟员广场</a></li>
+    <li><a ui-sref="links">友情链接</a></li> 
+    <li><a ui-sref="login">注册</a></li>
+    <li><a ui-sref="register">登陆</a></li>
+    <li><a ui-sref="saying.taptype({taptype:'hotPost'})">我有话说</a></li>
+</ul>
+
+    
